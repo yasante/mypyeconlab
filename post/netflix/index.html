@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Netflix Movie Duration Analysis | Asante&#39;s Lab</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="~Asante">
+    <meta name="generator" content="Hugo 0.117.0">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="https://yasante.github.io/mypyeconlab/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="Netflix Movie Duration Analysis" />
+<meta property="og:description" content="~Asante" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yasante.github.io/mypyeconlab/post/netflix/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2017-04-14T11:25:05-04:00" />
+<meta property="article:modified_time" content="2017-04-14T11:25:05-04:00" />
+<meta itemprop="name" content="Netflix Movie Duration Analysis">
+<meta itemprop="description" content="~Asante"><meta itemprop="datePublished" content="2017-04-14T11:25:05-04:00" />
+<meta itemprop="dateModified" content="2017-04-14T11:25:05-04:00" />
+<meta itemprop="wordCount" content="467">
+<meta itemprop="keywords" content="Predictive Analysis," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Netflix Movie Duration Analysis"/>
+<meta name="twitter:description" content="~Asante"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  
+  <header class="cover bg-top" style="background-image: url('https://yasante.github.io/mypyeconlab/images/netflix.jpg');">
+    <div class="bg-black-60">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://yasante.github.io/mypyeconlab/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Asante&#39;s Lab
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://yasante.github.io/mypyeconlab/about/" title="About page">
+              About
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://yasante.github.io/mypyeconlab/post/" title="Articles page">
+              Articles
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://yasante.github.io/mypyeconlab/contact/" title="Contact page">
+              Contact
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+<div class="ananke-socials">
+  
+    
+    <a href="https://twitter.com/GoHugoIO" target="_blank" rel="noopener" class="twitter ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="Twitter link" aria-label="follow on Twitter——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv6 ph3 ph4-ns">
+        
+          <div class="f2 f1-l fw2 white-90 mb0 lh-title">Netflix Movie Duration Analysis</div>
+          
+            <div class="fw1 f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4">
+              ~Asante
+            </div>
+          
+        
+      </div>
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        ARTICLES
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+      
+      <a href="https://twitter.com/intent/tweet?url=https://yasante.github.io/mypyeconlab/post/netflix/&amp;text=Netflix%20Movie%20Duration%20Analysis" class="ananke-social-link twitter no-underline" aria-label="share on Twitter">
+        
+        <span class="icon"> <svg style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+</span>
+        
+      </a>
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">Netflix Movie Duration Analysis</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2017-04-14T11:25:05-04:00">April 14, 2017</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p><strong>Project Overview:</strong></p>
+<p>The Netflix Movie Duration Analysis serves as a comprehensive exploration into the trends of movie durations on the Netflix platform. This data science capstone project commences with a background to the analysis, highlighting Netflix&rsquo;s evolution from a DVD rental service to the largest entertainment and media company. The primary objective is to investigate the claim that the average duration of movies on Netflix has been declining.</p>
+<p><strong>Data Loading and Exploration:</strong></p>
+<p>The project begins by loading the necessary data, incorporating both aggregated data provided by a colleague (indicating average movie durations for the years 2011 to 2020) and a more extensive dataset obtained from the Netflix platform. A pandas DataFrame is utilized to structure and inspect the data.</p>
+<p><strong>Visual Inspection and Initial Analysis:</strong></p>
+<p>A line plot is employed to visualize the average movie durations over the specified years (2011-2020), providing an initial insight into the temporal trends. The project subsequently delves into a more detailed analysis by loading the entire Netflix dataset, enabling a more thorough exploration of movie durations and related attributes.</p>
+<p><img src="https://yasante.github.io/mypyeconlab/images/netflix/line-plot.png" alt="Line Plot"></p>
+<p><strong>Data Filtering and Subset Creation:</strong></p>
+<p>To focus exclusively on movies, the dataset is filtered accordingly, and a subset of relevant columns (title, country, genre, release year, and duration) is created for subsequent analysis. This step ensures a more targeted examination of movie-specific attributes.</p>
+<p><strong>Visualizing Movie Durations:</strong></p>
+<p>The analysis progresses to visualizing movie durations using a scatter plot, showcasing the distribution of movie durations over an extended period. The scatter plot provides a clear depiction of trends and variations, allowing for a visual assessment of any temporal patterns.
+<img src="https://yasante.github.io/mypyeconlab/images/netflix/movie-dur-by-year.png" alt="Scatter Plot"></p>
+<p><strong>Identifying Influential Genres:</strong></p>
+<p>An intriguing discovery emerges as shorter films, particularly genres such as &ldquo;Children,&rdquo; &ldquo;Stand-Up,&rdquo; and &ldquo;Documentaries,&rdquo; are identified as contributing significantly to the decline in average movie durations. These findings prompt a more in-depth investigation into the impact of non-typical genres on the observed trend.</p>
+<p><strong>Color-Coded Scatter Plot:</strong></p>
+<p>To enhance the visualization and highlight the influence of non-typical genres, a color-coded scatter plot is created. This innovative approach allows for the distinct marking of genres, providing a more granular understanding of how specific categories contribute to the overall trend.</p>
+<p><em>Legend</em></p>
+<ul>
+<li>Children : <em>red</em></li>
+<li>Documentaries : <em>blue</em></li>
+<li>Stand-Up : <em>green</em></li>
+<li>Others : <em>black</em>
+<img src="https://yasante.github.io/mypyeconlab/images/netflix/colored-length.png" alt="Colored-Scatter Plot"></li>
+</ul>
+<p><strong>Conclusion and Further Exploration:</strong></p>
+<p>The project concludes with a comprehensive summary of findings, emphasizing the significance of non-typical genres in shaping the observed decline in average movie durations on Netflix. The analysis sparks further curiosity, encouraging additional exploration and in-depth investigations to uncover the nuances of this trend.</p>
+<p><strong>Project Significance:</strong></p>
+<p>This Netflix Movie Duration Analysis serves as a robust example of an end-to-end data science capstone project. It encompasses data loading, cleaning, exploration, visualization, and interpretation, providing valuable insights for both data scientists and stakeholders interested in understanding the evolving landscape of movie durations on one of the world&rsquo;s leading streaming platforms.</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="https://yasante.github.io/mypyeconlab/tags/predictive-analysis/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Predictive Analysis</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://yasante.github.io/mypyeconlab/" >
+    &copy;  Asante's Lab 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+    
+    <a href="https://twitter.com/GoHugoIO" target="_blank" rel="noopener" class="twitter ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="Twitter link" aria-label="follow on Twitter——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

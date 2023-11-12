@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Predictive Analysis on Asante&#39;s Lab</title>
+    <link>https://yasante.github.io/mypyeconlab/tags/predictive-analysis/</link>
+    <description>Recent content in Predictive Analysis on Asante&#39;s Lab</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 09 Apr 2023 10:58:08 -0400</lastBuildDate><atom:link href="https://yasante.github.io/mypyeconlab/tags/predictive-analysis/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Predicting Apartment Prices in Beijing</title>
+      <link>https://yasante.github.io/mypyeconlab/post/beijing-housing/</link>
+      <pubDate>Sun, 09 Apr 2023 10:58:08 -0400</pubDate>
+      
+      <guid>https://yasante.github.io/mypyeconlab/post/beijing-housing/</guid>
+      <description>Project Description: Overview This project focuses on predicting apartment prices in Beijing using machine learning models. The dataset used for this analysis contains various features related to apartment listings, including location, amenities, and other relevant details. The goal is to build a model that accurately predicts apartment prices based on these features.
+Steps Data Cleaning:
+Removed irrelevant columns such as &amp;lsquo;url&amp;rsquo;, &amp;lsquo;id&amp;rsquo;, and others. Eliminated outliers by trimming the dataset based on the total price.</description>
+    </item>
+    
+    <item>
+      <title>Netflix Movie Duration Analysis</title>
+      <link>https://yasante.github.io/mypyeconlab/post/netflix/</link>
+      <pubDate>Fri, 14 Apr 2017 11:25:05 -0400</pubDate>
+      
+      <guid>https://yasante.github.io/mypyeconlab/post/netflix/</guid>
+      <description>Project Overview:
+The Netflix Movie Duration Analysis serves as a comprehensive exploration into the trends of movie durations on the Netflix platform. This data science capstone project commences with a background to the analysis, highlighting Netflix&amp;rsquo;s evolution from a DVD rental service to the largest entertainment and media company. The primary objective is to investigate the claim that the average duration of movies on Netflix has been declining.
+Data Loading and Exploration:</description>
+    </item>
+    
+  </channel>
+</rss>
